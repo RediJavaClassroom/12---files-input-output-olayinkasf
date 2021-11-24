@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Build",
+      "setup": "mvn clean compile",
+      "run": "mvn verify",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
