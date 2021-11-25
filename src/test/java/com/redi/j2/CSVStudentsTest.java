@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -70,7 +71,7 @@ class CSVStudentsTest {
     void _3_2_read_should_throw_IOException_if_csv_file_does_not_exist() {
         assertThrownRead(
                 format("%s.csv", randomUUID()),
-                NoSuchFileException.class,
+                FileNotFoundException.class,
                 "'read' should throw NoSuchFileException if csv file does not exist");
     }
 
